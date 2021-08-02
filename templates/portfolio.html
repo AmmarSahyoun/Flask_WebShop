@@ -5,11 +5,31 @@
 
 {% block content %}
 <div class="row">
-  <div class="col-lg-7 offset-lg-2 my-5">
-    <h1>Welcome to my portfolio</h1><hr>
+    <div class="col-lg-7 offset-lg-2 my-5">
+        <h3> Hey! </h3>
+        </div>
 
-  </div>
-</div>
+    <div class="col-lg-7 offset-lg-2 my-5">
+        <h5 class="cust-my-name animate__zoomIn animate__animated">The store App is a webshop that
+            allows the customers to add products and even apply search filtering for items,
+            You can try the store App from the above navigation bar or move to other projects in the links down </h5></div>
+
+
+    <div class="col-lg-7 offset-lg-2 my-5">
+        <div class="container" id="introduce">
+        <img src="{{ url_for('static', filename='images/introduce.png') }}" height="40px" , class="img-fluid">
+        <div class="row cust-introduce-row">
+
+                <h1 class="mb-5 line-after line-before cust-inroduction-heading ">introduce my self</h1>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
 {% endblock %}
 {% block javascript %}
 <script src="{{ url_for('static', filename='js/subcategory.js') }}">
