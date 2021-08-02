@@ -17,7 +17,7 @@ app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["jpeg", "jpg", "png"]
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024
 app.config["IMAGE_UPLOADS"] = os.path.join(basedir, "uploads")
 
-#app.config["TESTING"] = True
+app.config["TESTING"] = True
 
 app.config["RECAPTCHA_PUBLIC_KEY"] = "6Ld8KdMbAAAAAHmZwZ9ZZ7tl-i261gUksgEVZxoe"
 app.config["RECAPTCHA_PRIVATE_KEY"] = "6Ld8KdMbAAAAAMrPax1ipKQcvGnJzbhrdGF_Gh_z"
@@ -273,6 +273,8 @@ def new_comment():
     if is_ajax:
         return "Content is required.", 400
     return redirect(url_for('item', item_id=form.item_id.data))
+
+
 
 @app.route("/")
 def home():
