@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% set active_page = 'new_item' %}
+{% from "_error_messages.html" import field_error_messages, error_messages %}
+{% block title %}Ammar Portfolio {% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-lg-7 offset-lg-2 my-5">
+    <h1>Welcome to my portfolio</h1><hr>
+
+  </div>
+</div>
+{% endblock %}
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/subcategory.js') }}">
+</script>
+{% endblock %}

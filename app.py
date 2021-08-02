@@ -274,9 +274,11 @@ def new_comment():
         return "Content is required.", 400
     return redirect(url_for('item', item_id=form.item_id.data))
 
-
-
 @app.route("/")
+def portfolio():
+    return render_template("portfolio.html")
+
+@app.route("/fynd")
 def home():
     conn = get_db()
     c = conn.cursor()
