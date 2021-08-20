@@ -106,7 +106,7 @@ class FilterForm(FlaskForm):
     price       = SelectField("Price", coerce=int, choices=[(0, "---"), (1, "Max to Min"), (2, "Min to Max")])
     category    = SelectField("Category", coerce=int)
     subcategory = SelectField("Subcategory", coerce=int)
-    submit      = SubmitField("Filter")
+    submit      = SubmitField("Search")
 
 class NewCommentForm(FlaskForm):
     content = TextAreaField("Comment", validators=[InputRequired("Input is required."), DataRequired("Data is required.")])
@@ -368,7 +368,7 @@ def new_item():
 
     c.execute("SELECT id, name FROM categories")
     categories = c.fetchall()
-    # [(1, 'Food'), (2, 'Technology'), (3, 'Books')]
+
     form.category.choices = categories
 
     c.execute("SELECT id, name FROM subcategories")
